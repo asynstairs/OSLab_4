@@ -11,7 +11,8 @@ int main ( void ){
     switch ( p = fork() ) {
         case 0: {
             printf("Child Process. PID = %d, PPID = %d\n", getpid(), getppid());
-            exit(exitcode);
+            system("bin/ls -la /tmp");
+            exit(5);
         }
         case -1: {
             printf("Error\n");
